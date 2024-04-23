@@ -1,0 +1,566 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    grid-template-areas:
+        "header header header"
+        "contenido contenido contenido"
+        "noticia1 noticia2 noticia3"
+        "noticia4 noticia5 noticia6"
+        "noticia7 noticia8 noticia9"
+        "futer futer futer";
+    background-color: rgb(238, 238, 238);
+    width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    grid-auto-flow: column;
+    overflow: auto;
+}
+
+.contenedorvideoclub {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    grid-template-areas:
+        "header header"
+        "botones botones"
+        "tabla form"
+       
+        "futer futer";
+    background-color: rgb(238, 238, 238);
+    width: 90%;
+    margin: 20px auto;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+    grid-auto-flow: column;
+    overflow: auto;
+}
+
+.divbotones {
+
+    grid-area: botones;
+}
+
+.divtabla{
+
+    grid-area: tabla;
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+}
+
+.divform{
+
+    grid-area: form;
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+}
+
+.catalogo{
+    grid-area: catalogo;
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+}
+
+
+header{
+    grid-area: header;
+    display: flex;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 211, 105);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.rb__logo{
+    display: flex;
+    align-items: center;
+}
+.rb__logo-img{
+    height: 60px;
+    margin-right: 10px;
+}
+.rb__logo-img:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+.rb__logo-nombre span:before{
+    content: '';
+    animation: animate infinite 10s;
+}
+@keyframes animate{
+    0%{
+        content: 'FS';
+        letter-spacing: 2;
+    }
+    40%{
+        content: 'Pelis';
+        letter-spacing: 3px;
+    }
+    70%{
+        content: 'Series';
+        letter-spacing: 4px;
+    }
+    100%{
+        content: 'Linux';
+        letter-spacing: 2px;
+    }
+}
+a{
+    text-decoration: none;
+    color: rgb(34, 40, 49);
+    transition: 0.2s;
+}
+.rb__nav-link{
+    font-weight: 500;
+    padding-right: 10px;
+    transition: 0.2s;
+}
+.rb__nav-link:hover{
+    color: rgb(238, 238, 238);
+    transform: scale(1.3);
+}
+.bodi {
+    background-color: rgb(34, 40, 49);
+    justify-content: center;
+}
+
+.foto {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.foto:hover {
+    transition: .2s;
+    transform: scale(1.02);
+    border-radius: 10px;
+}
+
+.recomendados__titulo {
+    color: rgb(34, 40, 49);
+    font-weight: bolder;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    margin: 0 0 10px 0;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.recomendados__titulo:hover {
+    box-shadow: inset 220px 0 0 0 #FFD369;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-style: oblique;
+}
+
+.recomendados__descripcción {
+    color: black;
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.recomendados__descripcción:hover {
+    transition: .3s;
+    font-weight: 500;
+}
+
+.recomedados__generos {
+    margin: 0 0 10px 0;
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.recomendados__info__tecnica {
+    margin: 0 0 10px 0;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 19px;
+}
+
+
+.contenedorvideos {
+    background-color: rgb(238, 238, 238);
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 10px;
+    grid-template-areas:
+        "header header"
+        "video video"
+        "video video"
+        "video video"
+        "video video"
+        "futer futer";
+
+    justify-content: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.video {
+    border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+
+
+}
+.video iframe{ 
+    width: 100%;
+    }
+
+.futer {
+    border-radius: 5px;
+    padding: 25px;
+    background-color: rgb(57, 62, 70);
+}
+
+.futer__flexbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.futer__logo__repo > a > img {
+    width: 50px;
+}
+
+.futer__logo__repo > a > img:hover {
+    transition: 0.7s;
+    transform:rotate(360deg);
+}
+
+.futer__grupo {
+    color: rgb(238, 238, 238);
+    font-weight: bolder;
+    font-style: oblique;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.futer__grupo:hover {
+    box-shadow: inset 300px 0 0 0 #FFD369;
+    color: rgb(34, 40, 49);
+}
+
+
+.futer__logo_codo_a_codo > a > img {
+    width: 115px;
+    border-radius: 12px;
+}
+
+.futer__logo_codo_a_codo > a > img:hover {
+    transition: 0.5s;
+    transform: scale(1.3);
+}
+
+
+
+.header {
+    grid-area: header;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    align-items: center;
+    border-color: black;
+    border-width: thick;
+    border-style: double;
+    padding: 5px;
+    background-color: rgb(255, 211, 105);
+    justify-content: center;
+
+}
+
+.logo {
+    width: 50pxpx;
+    height: 50px;
+
+}
+
+.logo:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+
+.contenido {
+    grid-area: contenido;
+    
+
+}
+
+.noticia1 {
+    grid-area: noticia1;
+}
+.noticia2 {
+    grid-area: noticia2;  
+}
+.noticia3 {
+    grid-area: noticia3;
+}
+.noticia4 {
+    grid-area: noticia4;
+}
+.noticia5 {
+    grid-area: noticia5;  
+}
+.noticia6 {
+    grid-area: noticia6;
+}
+.noticia7 {
+    grid-area: noticia7;
+}
+.noticia8 {
+    grid-area: noticia8;  
+}
+.noticia9 {
+    grid-area: noticia9;
+}
+
+
+.futer {
+    grid-area: futer;
+}
+
+/* Estilo de la lista */
+ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Estilo de los elementos li */
+ul li {
+    list-style: none;
+    margin: 0 15px;
+    transition: 0.4s;
+}
+
+/* Estilo de los links dentro de la lista */
+ul li a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+
+    color: rgb(34, 40, 49);
+    font-size: 12px;
+    padding: 6px;
+    transition: 0.2s;
+
+}
+
+/* Al pasar el mouse sobre la LISTA */
+ul:hover li a {
+    transform: scale(1.2);
+    opacity: 0.7;
+    filter: blur(0.5px);
+
+}
+
+/* Al pasar el mouse sobre un LINK dentro de la lista */
+ul li a:hover {
+    transform: scale(1.3);
+    /* Zoom */
+    opacity: 1;
+    filter: blur(0px);
+}
+/* css para lo que traigo de la API*/
+.contenedorbusqueda {
+    background-color: rgb(238, 238, 238);
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    grid-template-areas:
+        "header"
+        "buscador"
+        "busc"
+     "futer";
+
+    
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.buscador {border-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+    width: 98%;
+    margin: auto;
+    align-items: center;
+}
+
+.busc{display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+   grid-area: busc;
+    
+    margin: auto;
+    gap: 10px;
+}
+.buschijo {border-color: black;
+    
+    border-width: 2px;
+    border-style: dashed;
+    padding: 10px;
+    background-color: rgba(255, 210, 105, 0.25);
+    border-radius: 15px;
+    width: 90%;
+    
+
+}
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: 
+            "header header"
+            "contenido contenido"
+            "noticia1 noticia2"
+            "noticia3 noticia4"
+            "noticia5 noticia6"
+            "noticia7 noticia8"
+            "noticia9 noticia9"
+            "futer futer";
+    }
+
+    .contenedorvideos {
+        background-color: rgb(238, 238, 238);
+        width: 90%;
+
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(10, auto);
+        gap: 10px;
+        grid-template-areas:
+            "header"
+            "video"
+            "video"
+            "video"
+            "video"
+            "video"
+            "video"
+            "video"
+            "video"
+            "futer";
+
+        justify-content: center;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    .busc{display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(30, 1fr);
+       grid-area: busc;
+        
+        margin: auto;
+        gap: 10px;
+    }
+    .buschijo {border-color: black;
+        
+        border-width: 2px;
+        border-style: dashed;
+        padding: 10px;
+        background-color: rgba(255, 210, 105, 0.25);
+        border-radius: 15px;
+        width: 90%;
+        
+    
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas: 
+            "header"
+            "contenido"
+            "noticia1"
+            "noticia2"
+            "noticia3"
+            "noticia4"
+            "noticia5"
+            "noticia6"
+            "noticia7"
+            "noticia8"
+            "noticia9"
+            "futer";
+
+       
+    }
+    .logo {
+        width: 0px;
+        height: 0px;
+    }
+    .busc{display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+       grid-area: busc;
+        
+        margin: auto;
+        gap: 10px;
+    }
+    .buschijo {border-color: black;
+        
+        border-width: 2px;
+        border-style: dashed;
+        padding: 10px;
+        background-color: rgba(255, 210, 105, 0.25);
+        border-radius: 15px;
+        width: 90%;
+}}

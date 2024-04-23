@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link a css-->
+    <link rel="icon" href="claqueta.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>cine<Iniciar Sesion>code</title>
+</head>
+
+<body class="bodi">
+
+    <!-- =========== header - Ramiro ============== -->
+
+    <div class="contenedorvideoclub">
+        <header>
+            <div class="rb__logo">
+                <img src="claqueta.png" alt="Logo de la compañia" class="rb__logo-img">
+                <h2 class="rb__logo-nombre">Cine FS</h2>
+            </div>
+            <nav>
+                <a href="index.html" class="rb__nav-link">Inicio</a>
+                <a href="buscar.html" class="rb__nav-link">Buscar</a>
+                <a href="videos.html" class="rb__nav-link">Videos</a>
+                <a href="contacto.html" class="rb__nav-link">Contacto</a>
+                <a href="Videoclub.html" class="rb__nav-link">90's Videoclub</a>
+            </nav>
+        </header>
+        
+
+        <div class="divbotones"><button id="botonbuscar">Buscar por Nombre</button>
+        <input id="textoBuscar" type="text" placeholder="Nombre de Pelicula">   
+        <button id="botonlistar">Listar Todo el Catalogo</button></div>
+        <div class="divtabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Nombre</th>
+                        <th>Genero</th>
+                        <th>Año</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+            <tbody id="contpelis"></tbody>
+            </table>
+        </div>
+
+        <div class="divform"><form id="formulario">
+            <label for="id">Codigo:</label>
+            <input type="number" id="agregarid" name="id" required>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="agregarnombre" name="nombre" required>
+            <br>
+            <label for="genero">Género:</label>
+            <input type="text" id="agregargenero" name="genero" required>
+            <br>
+            <label for="año">Año:</label>
+            <input type="number" id="agregaraño" name="año" required>
+            <br>
+            
+            <label for="stock">Stock:</label>
+            <input type="number" id="agregarstock" name="stock" required>
+            <br>
+            <button id="agregar_o_modificar_pelicula" type="submit">Agregar película</button>
+        </form></div>
+
+
+        
+            
+        <footer class="futer">
+            <div class="futer__flexbox">
+                <div class="futer__logo__repo" >
+                    <a href="https://github.com/andresito-luna/linuxeros" target="_blank">
+                        <img src="assets/img/logos/github-mark-white.svg" alt="Nuestro Repo">
+                    </a>
+                </div>
+
+                <script src="/js/videoclub.js"></script>
+                    <div class="futer__grupo">
+                        <p>Grupo: Linuxeros | @2023</p>
+                    </div>
+
+                <div class="futer__logo_codo_a_codo" >
+                    <a href="https://buenosaires.gob.ar/educacion/codocodo/el-programa" target="_blank">
+                        <img src="assets/img/logos/logo_codo_a_codo.png" alt="logo_codo_a_codo">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
